@@ -1,0 +1,43 @@
+<!--This declares that this is a html page-->
+<!DOCTYPE html>
+
+<!-- This make the page english and what pluggins are needed-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!--This is the charater set that is used on this page-->
+    <meta charset="UTF-8">
+    <!--This sets the title of the page -->
+    <title>Template App</title>
+
+    <!-- This calls the style sheet that is used for formating the page -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+
+<!--The Header of the page -->
+<h1>This is Spring!!!!</h1>
+
+    <!-- paragraph of text and is calling informaing from favoriteFood .java page-->
+<p>My favorite food is <span th:text="${favoriteFood}"></span></p>
+
+<!-- another paragraph calling the author from .java page -->
+<p>This site was built by <span th:text="${author}"></span></p>
+
+<!-- another paragraph calling chows from .java page -->
+<p>My Favorite tv shows are <span th:text="${shows}"></span></p>
+
+<!-- another head for the page -->
+<h2>My favorites foods</h2>
+
+<!-- making an unordered list for foods from a food list from .java page -->
+<ul>
+    <li th:each="food : ${favoriteFoods}" th:text="${food}"></li>
+</ul>
+
+<!-- another header  -->
+<h2>Pic</h2>
+
+<!-- calling img source for a picture -->
+<img src="../img/bug_or_feature.jpg">
+</body>
+</html>

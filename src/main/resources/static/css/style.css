@@ -1,0 +1,7 @@
+/*This is the style sheet to change the webpages look*/
+
+/*This block changes the body of the page*/
+body{
+    color: orangered;
+    background: lightblue;
+}
